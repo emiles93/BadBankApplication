@@ -1,0 +1,197 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #add8e6; /* Friendly blue background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center; /* Center text in the body */
+}
+
+/* Container styling */
+.container, .login-container {
+  text-align: center; /* Center text in the container */
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: #f8f9fa; /* Light grayish color */
+  color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Add margin to separate from content */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove margin */
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #333; /* Dark text color for contrast */
+  text-decoration: none;
+  padding: 10px;
+  position: relative; /* Required for tooltip positioning */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smooth hover effect */
+  outline: none; /* Remove default focus outline */
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -40px; /* Adjust based on desired position */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black background */
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px; /* Soft edges */
+  font-size: 14px;
+  white-space: nowrap;
+  display: block;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Remove focus outline from all elements */
+* {
+  outline: none !important;
+}
+
+nav ul li a:focus, nav ul li a:active {
+  outline: none; /* Remove focus outline */
+}
+
+h1, h2 {
+  color: #333;
+}
+
+/* Form styling */
+form {
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 5px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center; /* Center text in input fields */
+}
+
+button, .btn {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue color for buttons */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shaded gray border */
+}
+
+button:hover, .btn:hover {
+  background-color: #0056b3;
+}
+
+p {
+  color: #333;
+}
+
+/* Hidden class for toggling visibility */
+.hidden {
+  display: none;
+}
+
+/* Styling for home page image */
+.home-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Transaction item styling */
+.transaction-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.transaction-item p {
+  margin: 0;
+}
+
+/* Message styling for form validation */
+.text-danger {
+  color: red;
+}
+
+.text-success {
+  color: green;
+}
+
+/* Card styling */
+.card {
+  max-width: 600px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.card-img-top {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+/* Stylish button */
+.stylish-btn {
+  background-color: #28a745; /* Green color for create account button */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.stylish-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.stylish-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Adjust margin between nav-top and nav-bottom */
+.nav-bottom {
+  margin-top: 20px;
+}
+
+/* Active nav item highlight */
+nav ul li a.active {
+  background-color: #0056b3; /* Highlight color */
+  color: #fff;
+  border-radius: 4px;
+}
